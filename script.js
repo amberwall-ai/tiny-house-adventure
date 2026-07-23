@@ -57,7 +57,7 @@ const rooms = {
          next: "campfire"
       },
       {
-        text: "Go Home"
+        text: "Go Home",
         next: "hall"
       }
    ]  
@@ -88,14 +88,14 @@ campfire: {
 },
   
 coffee: {
-  description: "The coffee smells inticing. You feel refreshed!",
+  description: "The coffee smells enticing. You feel refreshed!",
   options: [
       {
         text: "Sit by the Fire",
         next: "campfire"
       }
   ]
-};
+},
 
 river: {
     description: "A crystal-clear river flows gently. Fish swim beneath the surface.",
@@ -119,7 +119,7 @@ fish: {
             next: "river"
         }
     ]
-}
+};
 let currentRoom = "hall";
 
 const description = document.getElementById("description");
