@@ -50,9 +50,13 @@ const rooms = {
       {
         text: "Go home",
         next: "hall"
-      }
-  ]
-};
+      },
+      {
+         text: "Walk to River",
+         next: "river"
+      }      
+   ]  
+},            
 mushroom: {
   description: "You found a glowing mushroom! It might be magical.",
   options: [
@@ -84,7 +88,29 @@ coffee: {
       }
   ]
 };
+river: {
+    description: "A crystal-clear river flows gently. Fish swim beneath the surface.",
+    options: [
+        {
+            text: "Go Fishing",
+            next: "fish"
+        },
+        {
+            text: "Return to Forest",
+            next: "forest"
+        }
+    ]
+},
 
+fish: {
+    description: "You caught a fish! Dinner is saved.",
+    options: [
+        {
+            text: "Return to River",
+            next: "river"
+        }
+    ]
+},
 let currentRoom = "hall";
 
 const description = document.getElementById("description");
