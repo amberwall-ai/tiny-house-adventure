@@ -40,6 +40,7 @@ const rooms = {
       }
     ]
   },
+  
   forest: {
     description: "Tall trees surround you. Birds are singing.",
     options: [
@@ -60,7 +61,8 @@ const rooms = {
         next: "hall"
       }
    ]  
-},            
+},
+  
 mushroom: {
   description: "You found a glowing mushroom! It might be magical.",
   options: [
@@ -70,6 +72,7 @@ mushroom: {
     }
 ]
 },
+  
 campfire: {
   description: "A warm campfire crackles under the moon.",
   options: [
@@ -83,6 +86,7 @@ campfire: {
       }
    ]
 },
+  
 coffee: {
   description: "The coffee smells inticing. You feel refreshed!",
   options: [
@@ -92,6 +96,7 @@ coffee: {
       }
   ]
 };
+
 river: {
     description: "A crystal-clear river flows gently. Fish swim beneath the surface.",
     options: [
