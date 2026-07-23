@@ -5,6 +5,14 @@ const rooms = {
       {
         text: "Go Inside",
         next: "livingRoom"
+      },
+      {
+        text: "Walk into the Forest",
+        next: "forest"
+      },
+      {
+        text: "Visit the Campfire",
+        next: "campfire"
       }
     ]
   },
@@ -32,6 +40,49 @@ const rooms = {
       }
     ]
   }
+  forest: {
+    description: "Tall trees surround you. Birds are singing."'
+    options: [
+      {
+        text: "Pick a Mushroom",
+        next: "mushroom"
+      },
+      {
+        text: "Go home",
+        next: "hall"
+      }
+  ]
+};
+mushroom: {
+  description: "You found a glowing mushroom! It might be magical.",
+  options: [
+    {
+      text: "Return to Forest"'
+      next: "forest"
+    }
+]
+},
+campfire: {
+  description: "A warm campfire crackles under the moon."
+  options: [
+      {
+        text: "Make Coffee",
+        next: "coffee"
+      },
+      {
+        text: "Go home",
+        next: "hall"
+      }
+   ]
+},
+coffee: {
+  description: "The coffee smells inticing. You feel refreshed!",
+  options: [
+      {
+        text: "Sit by the Fire",
+        next: "campfire"
+      }
+  ]
 };
 
 let currentRoom = "hall";
