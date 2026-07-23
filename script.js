@@ -119,7 +119,7 @@ fish: {
             next: "river"
         }
     ]
-},
+}
 let currentRoom = "hall";
 
 const description = document.getElementById("description");
