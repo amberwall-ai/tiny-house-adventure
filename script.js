@@ -41,7 +41,7 @@ const rooms = {
     ]
   }
   forest: {
-    description: "Tall trees surround you. Birds are singing."
+    description: "Tall trees surround you. Birds are singing.",
     options: [
       {
         text: "Pick a Mushroom",
