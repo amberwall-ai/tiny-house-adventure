@@ -119,6 +119,7 @@ fish: {
             next: "river"
         }
     ]
+}
 };
 
 let currentRoom = "hall";
