@@ -120,6 +120,7 @@ fish: {
         }
     ]
 };
+
 let currentRoom = "hall";
 
 const description = document.getElementById("description");
