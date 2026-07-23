@@ -48,13 +48,17 @@ const rooms = {
         next: "mushroom"
       },
       {
-        text: "Go home",
-        next: "hall"
+        text: "Walk to River",
+        next: "river"
       },
       {
-         text: "Walk to River",
-         next: "river"
-      }      
+         text: "Go to Campfire",
+         next: "campfire"
+      },
+      {
+        text: "Go Home"
+        next: "hall"
+      }
    ]  
 },            
 mushroom: {
