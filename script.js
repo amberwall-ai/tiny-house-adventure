@@ -39,7 +39,7 @@ const rooms = {
         next: "livingRoom"
       }
     ]
-  }
+  },
   forest: {
     description: "Tall trees surround you. Birds are singing.",
     options: [
@@ -61,13 +61,13 @@ mushroom: {
   description: "You found a glowing mushroom! It might be magical.",
   options: [
     {
-      text: "Return to Forest"'
+      text: "Return to Forest",
       next: "forest"
     }
 ]
 },
 campfire: {
-  description: "A warm campfire crackles under the moon."
+  description: "A warm campfire crackles under the moon.",
   options: [
       {
         text: "Make Coffee",
