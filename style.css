@@ -32,3 +32,64 @@ button:hover {
   background: gold;
   color: black;
 }
+/* Glowing moon */
+.moon {
+  position: fixed;
+  top: 45px;
+  right: 70px;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: #fff8c5;
+  box-shadow: 0 0 30px #fff4a8;
+  z-index: -1;
+}
+
+/* Floating fireflies */
+.fireflies span {
+  position: fixed;
+  font-size: 18px;
+  animation: floatFirefly 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.fireflies span:nth-child(1) {
+  top: 20%;
+  left: 12%;
+}
+
+.fireflies span:nth-child(2) {
+  top: 35%;
+  left: 82%;
+  animation-delay: 1s;
+}
+
+.fireflies span:nth-child(3) {
+  top: 70%;
+  left: 18%;
+  animation-delay: 2s;
+}
+
+.fireflies span:nth-child(4) {
+  top: 62%;
+  left: 75%;
+  animation-delay: 3s;
+}
+
+.fireflies span:nth-child(5) {
+  top: 15%;
+  left: 55%;
+  animation-delay: 4s;
+}
+
+@keyframes floatFirefly {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(25px, -35px);
+    opacity: 1;
+  }
+}
