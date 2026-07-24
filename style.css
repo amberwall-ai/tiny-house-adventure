@@ -14,7 +14,9 @@ body {
   max-width: 650px;
   margin: auto;
   border: 2px solid gold;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4)
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  position: relative;
+  z-index: 2;
 }
 
 button {
@@ -42,7 +44,7 @@ button:hover {
   border-radius: 50%;
   background: #fff8c5;
   box-shadow: 0 0 30px #fff4a8;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* Floating fireflies */
@@ -51,6 +53,7 @@ button:hover {
   font-size: 18px;
   animation: floatFirefly 6s ease-in-out infinite;
   pointer-events: none;
+  z-index: 3;
 }
 
 .fireflies span:nth-child(1) {
