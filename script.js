@@ -121,7 +121,35 @@ collectSparkles: {
     {
       text: "Search for more sparkles",
       next: "sparkleTwo"
+    },
+    {
+      text: "Return to Luna",
+      next: "fairy"
     }
+  ]
+},
+
+sparkleTwo: {
+  description: "You follow a trail of glowing dust deeper into the forest. Behind a mushroom, you discover another magical sparkle!✨",
+  options: [
+    {
+      text: "Collect the sparkle",
+      next: "sparkleThree"
+    },
+    {
+      text: "Return to Luna",
+      next: "fairy"
+    }
+  ]
+},
+
+sparkleThree: {
+  description: "You go further into the forest and discover near the river the 3rd and final sparkle! 💖!!",
+  options: [
+    {
+      text: "Collect final sparkle",
+      next: "fairyDust"
+    },
     {
       text: "Return to Luna",
       next: "fairy"
