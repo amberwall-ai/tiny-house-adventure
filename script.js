@@ -78,11 +78,11 @@ mushroom: {
 },
 
 fairy: {
-  desription: "A tiny fairy with glowing wings lands on your shoulder. She smiles and says `Thank you waking me! Take this magical fairy dust.`",
+  description: "A tiny fairy with glowing wings lands on your shoulder. She smiles and says `Thank you waking me! Take this magical fairy dust.`",
   options: [
     {
     text: "Take Fairy Dust",
-    next: "fairyDust"
+    next: "fairyQuest"
   },
   {
     text: "Return to Forest",
@@ -91,12 +91,40 @@ fairy: {
 ]
 },
 
+fairyQuest:{
+  description: "Luna the fairy looks worried. `My magic is weak! I need 3 sparkle drops from the forest to restore my fairy dust. Will you help me?`",
+  options: [
+    {
+    text: "Help Luna",
+    next: "collectSparkles"
+  },
+  {
+    text: "Maybe Later",
+    next: "forest"
+  }
+  ]
+},
+
 fairyDust: {
   description: "The fairy sprinkles the sparkling dust around you. You feel lighter, and the forest seems brighter than before.",
   options: [
     {
       text: "Continue Exploring",
       next: "forest"
+    }
+  ]
+},
+
+collectSparkles: {
+  description: "You venture deeper into the glowing forest and find a tiny sparkle floatin near a flower. You collect it! ✨",
+  options: [
+    {
+      text: "Search for more sparkles",
+      next: "sparkleTwo"
+    }
+    {
+      text: "Return to Luna",
+      next: "fairy"
     }
   ]
 },
