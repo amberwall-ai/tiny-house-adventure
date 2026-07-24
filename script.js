@@ -42,7 +42,7 @@ const rooms = {
   },
   
   forest: {
-    description: "Tall trees surround you. Birds are singing.",
+    description: "Tall trees surround you. Birds are singing. ✨ Tiny lights drift through the trees. A glowing mushroom rests beneath an ancient oak while distant fairy laughter echoes through the forest.",
     options: [
       {
         text: "Pick a Mushroom",
@@ -67,12 +67,40 @@ mushroom: {
   description: "You found a glowing mushroom! It might be magical.",
   options: [
     {
+      text: "Talk to the Fairy",
+      next: "fairy"
+    },
+    {
       text: "Return to Forest",
       next: "forest"
     }
 ]
 },
-  
+
+fairy: {
+  desription: "A tiny fairy with glowing wings lands on your shoulder. She smiles and says `Thank you waking me! Take this magical fairy dust.`",
+  options: [
+    {
+    text: "Take Fairy Dust",
+    next: "fairyDust"
+  },
+  {
+    text: "Return to Forest",
+    next: "forest"
+  }
+]
+},
+
+fairyDust: {
+  description: "The fairy sprinkles the sparkling dust around you. You feel lighter, and the forest seems brighter than before.",
+  options: [
+    {
+      text: "Continue Exploring",
+      next: "forest"
+    }
+  ]
+},
+
 campfire: {
   description: "A warm campfire crackles under the moon.",
   options: [
