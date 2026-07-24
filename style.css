@@ -1,10 +1,20 @@
+html {
+  mini-height: 100%;
+  background: #0b3d2e
+}
+
 body {
   font-family: Georgia, serif;
   background: linear-gradiaent(to bottom, #0b3d2e, #145a32, #1d8348);
   color: white;
   text-align: center;
-  margin: 40px;
+  margin: 0;
   min-height: 100vh;
+  padding: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #game { 
@@ -16,7 +26,7 @@ body {
   border: 2px solid gold;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 
 button {
@@ -45,6 +55,7 @@ button:hover {
   background: #fff8c5;
   box-shadow: 0 0 30px #fff4a8;
   z-index: 1;
+  pointer-events: none;
 }
 
 /* Floating fireflies */
@@ -53,7 +64,7 @@ button:hover {
   font-size: 18px;
   animation: floatFirefly 6s ease-in-out infinite;
   pointer-events: none;
-  z-index: 3;
+  z-index: 2;
 }
 
 .fireflies span:nth-child(1) {
@@ -95,4 +106,10 @@ button:hover {
     transform: translate(25px, -35px);
     opacity: 1;
   }
+}
+
+h1,
+h2 {
+  position: relative;
+  z-index: 10;
 }
