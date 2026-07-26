@@ -159,7 +159,7 @@ sparkleTwo: {
   description: "You follow a trail of glowing dust deeper into the forest. Behind a mushroom, you discover another magical sparkle!✨",
   options: [
     {
-      text: "Collect Sparkle",
+      text: "Collect Sparkle Two",
       next: "sparkleThree",
       action: () => {
         addItem("✨ Sparkle Two");
@@ -176,7 +176,7 @@ sparkleThree: {
   description: "You go further into the forest and discover near the river the 3rd and final sparkle! 💖!!",
   options: [
     {
-      text: "Collect Final Sparkle",
+      text: "Collect Sparkle Three",
       next: "fairyComplete",
       action: () => {
         addItem("✨ Sparkle THree");
