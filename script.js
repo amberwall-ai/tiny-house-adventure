@@ -241,7 +241,7 @@ function showRoom() {
     button.textContent = option.text;
 
     button.onclick = () => {
-        console.log(options);
+        console.log(option);
         
         if (option.action){
           console.log("Running action...");
