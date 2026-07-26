@@ -149,10 +149,6 @@ collectSparkles: {
       }
     },
     {
-      text: "Search for more sparkles",
-      next: "sparkleTwo"
-    },
-    {
       text: "Return to Luna",
       next: "fairy"
     }
