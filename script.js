@@ -102,7 +102,7 @@ fairy: {
      next: "fairyQuest",
      action: () => {
         addItem("✨ Fairy Dust ✨");
-        queasts.findFairyDust = true;
+        quests.findFairyDust = true;
      }
     },
     {
