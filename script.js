@@ -142,6 +142,13 @@ collectSparkles: {
   description: "You venture deeper into the glowing forest and find a tiny sparkle floatin near a flower. You collect it! ✨",
   options: [
     {
+      text: "Collect Sparkle One",
+      next: "sparkleTwo",
+      action: () => {
+        addItem("✨ Sparkle One");
+      }
+    },
+    {
       text: "Search for more sparkles",
       next: "sparkleTwo"
     },
