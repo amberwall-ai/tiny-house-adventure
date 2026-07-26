@@ -4,14 +4,14 @@ let inventory = [];
 
 let quests = {
   helpLuna: false,
-  findFairyDust: false;
+  findFairyDust: false,
   collectSparkles: false
 };
 
 function addItem(item) {
      if (!inventory.includes(item)) {
         inventory.push(item);
-        alert(`You recieved: $(item)!`);
+        alert('You received: $(item)');
      }
 }
 
