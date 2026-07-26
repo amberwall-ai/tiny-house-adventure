@@ -161,7 +161,8 @@ sparkleTwo: {
     {
       text: "Collect Sparkle Two",
       next: "sparkleThree",
-      action: () => {addItem("✨ Sparkle Two");
+      action: () => {
+        addItem("✨ Sparkle Two");
       }
     },
     {
