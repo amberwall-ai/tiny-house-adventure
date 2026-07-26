@@ -11,7 +11,7 @@ let quests = {
 function addItem(item) {
      if (!inventory.includes(item)) {
         inventory.push(item);
-        alert('You received: $(item)');
+        alert(`You received: ${item}`);
      }
 }
 
