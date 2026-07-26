@@ -1,6 +1,7 @@
 let currentRoom = "hall";
 
 let inventory = [];
+const inventoryDisplay = document.getElementById("inventory");
 
 let quests = {
   helpLuna: false,
@@ -11,6 +12,7 @@ let quests = {
 function addItem(item) {
      if (!inventory.includes(item)) {
         inventory.push(item);
+        inventoryDisplay.textContent = inventory.join(",")
         alert(`You received: ${item}`);
      }
 }
