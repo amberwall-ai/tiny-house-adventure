@@ -99,7 +99,11 @@ fairy: {
   options: [
     {
      text: "Take Fairy Dust",
-     next: "fairyQuest"
+     next: "fairyQuest",
+     action: () => {
+        addItem("✨ Fairy Dust ✨");
+        queasts.findFairyDust = true;
+     }
     },
     {
      text: "Return to Forest",
@@ -223,8 +227,6 @@ fish: {
 }
 };
 
-let currentRoom = "hall";
-
 const description = document.getElementById("description");
 const buttons = document.getElementById("buttons");
 
@@ -239,9 +241,12 @@ function showRoom() {
     button.textContent = option.text;
 
     button.onclick = () => {
-      currentRoom = option.next;
-      showRoom();
-    };
+        if (option.action) {
+            option.actiom();
+        }
+        currentRoom = option.next;
+        showRoom();
+      };
 
     buttons.appendChild(button);
   });
