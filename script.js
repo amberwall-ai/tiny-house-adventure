@@ -190,11 +190,15 @@ sparkleThree: {
 },
 
 fairyComplete: {
-  description: "Luna smiles brightly! 'You found all three sparkles💖! My magic has been restored! Thank you so much, brave soul! 💖🧚🏼‍♀️'",
+  description: "Luna smiles as the sparkles surround her. Her wings glow brighter than ever! 'You saved the forest!' she says. 'Please accept this Fairy Cryatal as a token of my gratitude!' 💖🧚🏼‍♀️'",
   options: [
     {
-      text: "Return Home",
-      next: "hall"
+      text: "Recieve Fairy Crystal",
+      next: "forest",
+      action: () => {
+        addItem("💎 Fairy Crystal");
+        alert("🏆 Quest Complete! You have restored Luna's magic!!");
+      }
     }
   ]
 },
