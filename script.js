@@ -242,9 +242,13 @@ function showRoom() {
 
     button.onclick = () => {
         alert("The button works!");
+
+        console.log(options);
         
-        if (option.action) {
-            option.actiom();
+        if (option.action){
+          console.log("Running action...");
+          option.action();
+        
         }
         currentRoom = option.next;
         showRoom();
