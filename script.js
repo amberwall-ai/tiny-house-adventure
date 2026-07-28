@@ -17,6 +17,35 @@ function addItem(item) {
      }
 }
 
+function changeEnergy(amount) {
+  energy += amount;
+  if (energy > maxEnergy) {
+    energy = maxEnergy;
+  }
+
+  if (energy < 0) {
+    energy = 0;
+  }
+   updateEnergyDisplay();
+
+   if (energy === 0) { 
+    alert("💤 You ran out of energy and woke up safely at home in the loft room!");
+    enewrgy = maxEnergy;
+    updateEnergyDisplay();
+    showRoom("livingRoom");
+   } else if (energy <= 20) {
+    alert("⚠️ Your energy is running low. You should return home and rest.");
+   }
+}
+
+function updateEnergyDisplay() {
+  const energyDisplay = document.getElementById("energ-display");
+
+  if (energyDisplay) {
+    energyDisplay.textContent =`⚡️ Energy: ${energy}/{${maxEnergy}`;
+  }
+}
+
 const rooms = {
   hall: {
     description: "You are standing on the front porch of your tiny house.",
