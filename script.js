@@ -190,7 +190,7 @@ sparkleThree: {
 },
 
 fairyComplete: {
-  description: "Luna smiles as the sparkles surround her. Her wings glow brighter than ever! 'You saved the forest!' she says. 'Please accept this Fairy Cryatal as a token of my gratitude!' 💖🧚🏼‍♀️'",
+  description: "Luna smiles as the sparkles surround her. Her wings glow brighter than ever! 'You saved the forest!' she says. 'Please accept this Fairy Cryatal as a token of my gratitude!' 💖🧚🏼‍♀️. It will light your path for adventures to come. Also, it shows magical creatures 🧌 that will help you on future quests!!'",
   options: [
     {
       text: "Recieve Fairy Crystal",
