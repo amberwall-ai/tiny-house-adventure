@@ -184,7 +184,7 @@ sparkleThree: {
     },
     {
       text: "Return to Luna",
-      next: "fairy"
+      next: "fairyComplete"
     }
   ]
 },
