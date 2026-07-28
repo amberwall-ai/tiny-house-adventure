@@ -39,7 +39,7 @@ function changeEnergy(amount) {
 }
 
 function updateEnergyDisplay() {
-  const energyDisplay = document.getElementById("energ-display");
+  const energyDisplay = document.getElementById("energy-display");
 
   if (energyDisplay) {
     energyDisplay.textContent =`⚡️ Energy: ${energy}/{${maxEnergy}`;
