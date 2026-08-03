@@ -97,21 +97,21 @@ const rooms = {
     options: [
       {
         text: "Pick a Mushroom",
+        energyCost = -5,
         next: "mushroom"
       },
       {
         text: "Walk to River",
-        action: () => changeEnergy(-10),
+        energyCost = =5,
         next: "river"
       },
       {
          text: "Go to Campfire",
-         action: () => changeEnergy(-1),
+         energyCost = -5,
          next: "campfire"
       },
       {
         text: "Go Home",
-        action: () => changeEnergy(0),
         next: "hall"
       }
    ]  
@@ -307,7 +307,9 @@ function showRoom() {
           console.log("Running action...");
           option.action();
         }
-        changeEnergy(-5);
+        if (option.energyCost) {
+          changeEnergy(option.energyCost);
+        }
 
         currentRoom = option.next;
         showRoom();
