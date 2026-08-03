@@ -90,6 +90,21 @@ const rooms = {
     description: "The smell of fresh cookies fills the room.",
     options: [
       {
+        text: "😋 Take One Cookie",
+        action: () => {
+          addItem("🍪 Cookie");
+        },
+        next: "kitchen"
+      },
+      {
+        text: "🍪🍪 Take Two Cookies",
+        action: () => {
+          addItem("🍪 Cookie");
+          addItem("🍪 Cookie");
+        },
+        next: "kitchen"
+      },
+      {
         text: "Return to Living Room",
         next: "livingRoom"
       }
