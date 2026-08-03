@@ -76,6 +76,10 @@ const rooms = {
         next: "kitchen"
       },
       {
+        text:"🪜 Go Upstairs",
+        next: "bedroom"
+      },
+      {
         text: "Go Outside",
         next: "hall"
       }
@@ -91,6 +95,24 @@ const rooms = {
       }
     ]
   },
+
+  bedroom: {
+    description: "🛌 You can climb the stairs to the bedroom. When you open the door a cozy bed and reading 📖 nook greets you. The bed has fluffy pillows, inviting you to lay on them. You can restore energy while resting.",
+    options: [
+      {
+      text: "😴 Sleep",
+      action: () => {
+        energy = maxEnergy;
+        updateEnergyDisplay();
+        alert("You wake up refreshed and ready for another adventure!");
+       },
+      next: "bedroom"
+    },
+    {text: "🪜 Go Downstairs",
+      next: "livingroom"
+    },
+  ]
+},
   
   forest: {
     description: "Tall trees surround you. Birds are singing. ✨ Tiny lights drift through the trees. A glowing mushroom rests beneath an ancient oak while distant fairy laughter echoes through the forest.",
