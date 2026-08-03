@@ -105,14 +105,17 @@ const rooms = {
       },
       {
         text: "Walk to River",
+        action: () => changeEnergy(-10),
         next: "river"
       },
       {
          text: "Go to Campfire",
+         action: () => changeEnergy(-1),
          next: "campfire"
       },
       {
         text: "Go Home",
+        action: () => changeEnergy(0),
         next: "hall"
       }
    ]  
