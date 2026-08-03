@@ -9,6 +9,8 @@ let quests = {
   collectSparkles: false
 };
 
+let energy = 100
+
 function addItem(item) {
      if (!inventory.includes(item)) {
         inventory.push(item);
