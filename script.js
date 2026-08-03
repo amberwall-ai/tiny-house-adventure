@@ -275,15 +275,23 @@ fairyComplete: {
 },
 
 campfire: {
-  description: "A warm campfire crackles under the moon.",
+  description: "A warm campfire crackles under the moon. A pot of coffee starts percolating on the fire and the smell of robust coffee hits your nose.",
   options: [
       {
         text: "Make Coffee",
         next: "coffee"
       },
       {
-        text: "Go home",
-        next: "hall"
+        text: "☕️ Drink Coffee",
+        action: () => {
+          changeEnergy(20);
+          alert("You drink a wonderfully, warming coffee. +20 Energy!"),
+        },
+        next: "Campfire"
+      }
+      {
+        text: "Return to Forest🌳",
+        next: "forest"
       }
    ]
 },
