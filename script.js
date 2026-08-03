@@ -323,12 +323,15 @@ river: {
 fish: {
     description: "You caught a fish! Dinner is saved.",
     options: [
-        {
-            text: "Return to River",
-            next: "river"
-        }
+       {
+        text: "🎏 Add Fish to Inventory",
+        action:() => {
+          addItem("🎏 Fish");
+        },
+        next: "river"
+       }
     ]
-}
+},
 };
 
 const description = document.getElementById("description");
