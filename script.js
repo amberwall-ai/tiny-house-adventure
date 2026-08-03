@@ -102,7 +102,7 @@ const rooms = {
       },
       {
         text: "Walk to River",
-        energyCost = =5,
+        energyCost = -10,
         next: "river"
       },
       {
