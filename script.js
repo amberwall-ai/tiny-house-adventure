@@ -97,6 +97,7 @@ const rooms = {
     options: [
       {
         text: "Pick a Mushroom",
+        action: () => changeEnergy (-5),
         next: "mushroom"
       },
       {
