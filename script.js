@@ -302,8 +302,9 @@ function showRoom() {
         if (option.action){
           console.log("Running action...");
           option.action();
-        
         }
+        changeEnergy(-5);
+        
         currentRoom = option.next;
         showRoom();
       };
