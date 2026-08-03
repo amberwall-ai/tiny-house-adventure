@@ -97,17 +97,17 @@ const rooms = {
     options: [
       {
         text: "Pick a Mushroom",
-        energyCost = -5,
+        energyCost: -5,
         next: "mushroom"
       },
       {
         text: "Walk to River",
-        energyCost = -10,
+        energyCost: -10,
         next: "river"
       },
       {
          text: "Go to Campfire",
-         energyCost = -5,
+         energyCost: -5,
          next: "campfire"
       },
       {
