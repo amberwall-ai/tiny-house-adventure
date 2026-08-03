@@ -99,7 +99,7 @@ const rooms = {
       {
         text: "🍪🍪 Take Two Cookies",
         action: () => {
-          addItem("🍪 Two Cookie");
+          addItem("🍪 Two Cookies");
         },
         next: "kitchen"
       },
