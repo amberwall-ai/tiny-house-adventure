@@ -10,6 +10,7 @@ let quests = {
 };
 
 let energy = 100
+const maxEnergy = 100;
 
 function addItem(item) {
      if (!inventory.includes(item)) {
@@ -32,7 +33,7 @@ function changeEnergy(amount) {
 
    if (energy === 0) { 
     alert("💤 You ran out of energy and woke up safely at home in the loft room!");
-    enewrgy = maxEnergy;
+    energy = maxEnergy;
     updateEnergyDisplay();
     showRoom("livingRoom");
    } else if (energy <= 20) {
@@ -304,7 +305,7 @@ function showRoom() {
           option.action();
         }
         changeEnergy(-5);
-        
+
         currentRoom = option.next;
         showRoom();
       };
