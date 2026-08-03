@@ -287,7 +287,7 @@ campfire: {
           changeEnergy(20);
           alert("You drink a wonderfully, warming coffee. +20 Energy!")
         },
-        next: "Campfire"
+        next: "campfire"
       },
       {
         text: "Return to Forest🌳",
