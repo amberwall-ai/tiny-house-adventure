@@ -337,7 +337,7 @@ fish: {
     ]
 },
 
-Moonbeam: {
+moonbeam: {
   description:
   "A tiny silver rabbit with blue-tipped ears hops into the path glowing in the moonlight. Blue sparkles appear beneath her paws. He pauses, looks back at you, as if to say 'Come, follow me.'",
   options: [
