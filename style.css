@@ -116,13 +116,13 @@ h2 {
 #character-area{
   display:flex;
   justify-content:center;
-  margin:2-px;
+  margin:2px;
 }
 
 #character{
-  width:160px;
-  height: auto;
-  max-width:60%;
+  width:160px; !important!;
+  height: auto !important!
+  max-width: 160px !important!;
   display: block;
   margin: 2px auto;
   border-radius:16px;
