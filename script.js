@@ -363,7 +363,7 @@ lunaClearing: {
     },
     {
       text: "🐇 Pet Moonbeam",
-      next: "MoonbeamHappy"
+      next: "moonbeamHappy"
     },
     {
       text: "🌲 Return to the Forest",
@@ -397,7 +397,7 @@ lunaStory: {
     },
     {
       text: "🐇 Visit Moonbeam",
-      next: "MoonbeamHappy"
+      next: "moonbeamHappy"
     }
   ]
 },
