@@ -133,7 +133,7 @@ const rooms = {
     options: [
       {
         text: "🐇 Follow the Glowing Rabbit",
-        next: "Moonbeam"
+        next: "moonbeam"
       },
       {
         text: "Pick a Mushroom",
