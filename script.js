@@ -132,6 +132,10 @@ const rooms = {
     description: "Tall trees surround you. Birds are singing. ✨ Tiny lights drift through the trees. A glowing mushroom rests beneath an ancient oak while distant fairy laughter echoes through the forest.",
     options: [
       {
+        text: "🐇 Follow the Glowing Rabbit",
+        next: "Moonbeam"
+      },
+      {
         text: "Pick a Mushroom",
         energyCost: -5,
         next: "mushroom"
@@ -331,6 +335,85 @@ fish: {
         next: "river"
        }
     ]
+},
+
+Moonbeam: {
+  description:
+  "A tiny silver rabbit with blue-tipped ears hops into the path glowing in the moonlight. Blue sparkles appear beneath her paws. He pauses, looks back at you, as if to say 'Come, follow me.'",
+  options: [
+    {
+      text: "🐇 Follow Moonbeam Deeper into the Forest",
+      energyCost: -5,
+      next:  "lunaClearing"
+    },
+    {
+      text: "🌲 Return to the Forest",
+      next: "forest"
+    }
+  ]
+},
+
+lunaClearing: {
+  description:
+  "Moonbeam leads you into a hidden clearing filled with glowwing, magical mushroooms. Beneath an ancient weeping willow stands Luna, a fairy with shimmering blue-black hair and crystal-blue wings.",
+  options: [
+    {
+      text: "🧚🏼‍♀️ Talk to Luna",
+      next: "lunaIntroduction"
+    },
+    {
+      text: "🐇 Pet Moonbeam",
+      next: "MoonbeamHappy"
+    },
+    {
+      text: "🌲 Return to the Forest",
+      next: "forest"
+    }
+  ]
+},
+
+lunaIntroduction: {
+  description: 
+  "\"Welcome, traveler,\" Luna says gently. \"Moonbeam has been waiting for someone brave and kind hearted. Our forest is losing its magic. Will you help us restore it?\"",
+  options: [
+    {
+      text: "✨ Agree to Help Luna",
+      next: "forest"
+    },
+    {
+      text: "🌒 Ask Luna About the Forest",
+      next: "lunaStory"
+    }
+  ]
+},
+
+lunaStory: {
+  description:
+  "Luna explains that the river, mushrooms, and woodland creatures are all connected by the magic that keeps the forest beautiful. Each act of kindness gives the forest a little more magic.",
+  options: [
+    {
+      text: "✨ Agree to Help",
+      next: "forest"
+    },
+    {
+      text: "🐇 Visit Moonbeam",
+      next: "MoonbeamHappy"
+    }
+  ]
+},
+
+moonbeamHappy: {
+  description: "Moonbeam happily wiggles her fluffy blue-black shimmering tail and twitches her nose. Sparkles float around her like they came from her fur!",
+  optuions: [
+    {
+      text: "Talk to Luna",
+      next: "lunaIntroduction"
+    },
+    {
+      text: "🌲 Return to Forest",
+      next: "forest"
+    }
+  ]
 },
 };
 
