@@ -421,14 +421,14 @@ const description = document.getElementById("description");
 const buttons = document.getElementById("buttons");
 const character = document.getElementById("character");
 
+const lunaRooms = [
+  "moonbeam",
+  "lunaClearing",
+  "moonbeamHappy"
+];
+
 function showRoom() {
   description.textContent = rooms[currentRoom].description;
-
-  const lunaRooms = [
-    "moonbeam",
-    "lunaClearing",
-    "moonbeamHappy"
-  ];
 
   if (lunaRooms.includes(currentRoom)) {
     character.style.display = "block";
