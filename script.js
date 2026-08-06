@@ -419,9 +419,21 @@ moonbeamHappy: {
 
 const description = document.getElementById("description");
 const buttons = document.getElementById("buttons");
+const character = document.getElementById("character");
 
 function showRoom() {
   description.textContent = rooms[currentRoom].description;
+
+  const moonbeamRooms = [
+    "moonbeam",
+    "moonbeamHappy"
+  ];
+
+  if (moonbeamRooms.includes(currentRoom)) {
+    character.style.display = "block";
+  } else {
+    character.style.display ="none";
+  }
 
   buttons.innerHTML = "";
 
