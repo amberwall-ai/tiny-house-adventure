@@ -430,12 +430,13 @@ const lunaRooms = [
 function showRoom() {
   description.textContent = rooms[currentRoom].description;
 
-  if (lunaRooms.includes(currentRoom)) {
-    character.style.display = "block";
-  } else {
-    character.style.display ="none";
+if (character) {
+    if (lunaRooms.includes(currentRoom)) {
+      character.style.display = "block";
+    } else {
+      character.style.display ="none";
+    }
   }
-
   buttons.innerHTML = "";
 
   rooms[currentRoom].options.forEach(option => {
