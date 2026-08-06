@@ -424,13 +424,13 @@ const character = document.getElementById("character");
 function showRoom() {
   description.textContent = rooms[currentRoom].description;
 
-  const moonbeamRooms = [
+  const lunaRooms = [
     "moonbeam",
     "lunaClearing",
     "moonbeamHappy"
   ];
 
-  if (moonbeamRooms.includes(currentRoom)) {
+  if (lunaRooms.includes(currentRoom)) {
     character.style.display = "block";
   } else {
     character.style.display ="none";
