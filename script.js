@@ -426,6 +426,7 @@ function showRoom() {
 
   const moonbeamRooms = [
     "moonbeam",
+    "lunaClearing",
     "moonbeamHappy"
   ];
 
