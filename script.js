@@ -458,11 +458,15 @@ if (character) {
 
         currentRoom = option.next;
 
-        alert(
-          "Room: " + currentRoom +
+        if (rooms[currentRoom]) {
+         alert(
+          "FOUND ROOM: " + currentRoom +
         " | Buttons: " + rooms[currentRoom].options.length
         );
-        
+      } else {
+        alert("MISSING ROOM: [" + currentRoom + "]");
+      }
+
         showRoom();
       };
 
