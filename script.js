@@ -428,6 +428,7 @@ const lunaRooms = [
 ];
 
 function showRoom() {
+  console.log("Current Room:", currentRoom);
   description.textContent = rooms[currentRoom].description;
 
 if (character) {
