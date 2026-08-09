@@ -457,6 +457,12 @@ if (character) {
         }
 
         currentRoom = option.next;
+
+        alert(
+          "Room: " + currentRoom +
+        " | Buttons: " + rooms[currentRoom].options.length
+        );
+        
         showRoom();
       };
 
