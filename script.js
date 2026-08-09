@@ -404,7 +404,7 @@ lunaStory: {
 
 moonbeamHappy: {
   description: "Moonbeam happily wiggles her fluffy blue-black shimmering tail and twitches her nose. Sparkles float around her like they came from her fur!",
-  optuions: [
+  options: [
     {
       text: "Talk to Luna",
       next: "lunaIntroduction"
