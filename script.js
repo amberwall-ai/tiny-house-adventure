@@ -427,6 +427,29 @@ const lunaRooms = [
   "moonbeamHappy"
 ];
 
+function updateCharacterImage () {
+  if (!character) return;
+
+  if (
+    currentRoom === "moonbeam" ||
+    currentRoom === "moonbeamHappy" 
+  ) {
+    character.src = "pictures/moonbeam.png";
+    character.alt = "Moonbeam";
+    character.style.display = "block";
+  } else if (
+    currentRoom === "lunaClearing" ||
+    currentRoom === "lunaIntroduction" ||
+    currentRoom === "lunaStory"
+  ) {
+    character.src = "pictures/luna&moonbeam.png";
+    character.alt = "Luna and Moonbeam";
+    character.style.display = "block";
+  } else {
+    character.style.display = "none";
+  }
+}
+
 function showRoom() {
   console.log("Current Room:", currentRoom);
   description.textContent = rooms[currentRoom].description;
@@ -457,7 +480,7 @@ if (character) {
         }
 
         currentRoom = option.next;
-        
+
         showRoom();
       };
 
