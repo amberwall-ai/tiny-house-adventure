@@ -428,7 +428,7 @@ const lunaRooms = [
 ];
 
 function updateCharacterImage() {
-  alert("Room: " + currentRoom);
+  alert("Room: " + currentRoom + " | Character found: " + !!character);
 
   if (!character) return;
 
