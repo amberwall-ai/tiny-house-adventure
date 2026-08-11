@@ -427,27 +427,31 @@ const lunaRooms = [
   "moonbeamHappy"
 ];
 
-function updateCharacterImage () {
-  if (!character) return;
+if (
+  currentRoom === "moonbeam" ||
+  currentRoom === "moonbeamHappy"
+) {
+  character.src = "pictures/moonbeam.png";
+  character.alt = "Moonbeam";
+  character.style.display = "block";
 
-  if (
-    currentRoom === "moonbeam" ||
-    currentRoom === "moonbeamHappy" 
-  ) {
-    character.src = "pictures/moonbeam.png";
-    character.alt = "Moonbeam";
-    character.style.display = "block";
-  } else if (
-    currentRoom === "lunaClearing" ||
-    currentRoom === "lunaIntroduction" ||
-    currentRoom === "lunaStory"
-  ) {
-    character.src = "pictures/luna&moonbeam.png";
-    character.alt = "Luna and Moonbeam";
-    character.style.display = "block";
-  } else {
-    character.style.display = "none";
-  }
+} else if (
+  currentRoom === "lunaIntroduction" ||
+  currentRoom === "lunaStory"
+) {
+  character.src = "pictures/luna.png";
+  character.alt = "Luna";
+  character.style.display = "block";
+
+} else if (
+  currentRoom === "lunaClearing"
+) {
+  character.src = "pictures/luna&moonbeam.png";
+  character.alt = "Luna and Moonbeam";
+  character.style.display = "block";
+
+} else {
+  character.style.display = "none";
 }
 
 function showRoom() {
