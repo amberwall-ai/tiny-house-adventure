@@ -427,6 +427,10 @@ const lunaRooms = [
   "moonbeamHappy"
 ];
 
+function updateCharacterImage() {
+  if (!character) return;
+}
+
 if (
   currentRoom === "moonbeam" ||
   currentRoom === "moonbeamHappy"
