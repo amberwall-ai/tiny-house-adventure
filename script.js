@@ -456,18 +456,14 @@ if (
 } else {
   character.style.display = "none";
 }
+}
 
 function showRoom() {
   console.log("Current Room:", currentRoom);
   description.textContent = rooms[currentRoom].description;
 
-if (character) {
-    if (lunaRooms.includes(currentRoom)) {
-      character.style.display = "block";
-    } else {
-      character.style.display ="none";
-    }
-  }
+  updateCharacterImage();
+
   buttons.innerHTML = "";
 
   rooms[currentRoom].options.forEach(option => {
