@@ -419,7 +419,6 @@ moonbeamHappy: {
 
 const description = document.getElementById("description");
 const buttons = document.getElementById("buttons");
-const character = document.getElementById("character");
 
 const lunaRooms = [
   "moonbeam",
@@ -428,6 +427,7 @@ const lunaRooms = [
 ];
 
 function updateCharacterImage() {
+  const character = document.getElementById("character");
   alert("Room: " + currentRoom + " | Character found: " + !!character);
 
   if (!character) return;
