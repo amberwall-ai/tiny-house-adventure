@@ -455,6 +455,13 @@ function updateCharacterImage() {
     character.src = "pictures/luna&moonbeam.png";
     character.alt = "Luna and Moonbeam";
     character.style.display = "block";
+  
+  } else if (
+    currentRoom === "campfire" 
+  ) {
+    character.src = "pictures/campfireCoffee.png";
+    character.alt = "Someone enjoying a cup of coffee by the campfire";
+    character.style.display = "block";
 
   } else {
     character.style.display = "none";
