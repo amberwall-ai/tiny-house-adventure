@@ -450,6 +450,7 @@ function updateCharacterImage() {
 
   } else if (
     currentRoom === "lunaClearing"
+    currentRoom === "fairyComplete"
   ) {
     character.src = "pictures/luna&moonbeam.png";
     character.alt = "Luna and Moonbeam";
