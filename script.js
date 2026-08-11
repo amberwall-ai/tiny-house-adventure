@@ -378,7 +378,7 @@ lunaIntroduction: {
   options: [
     {
       text: "✨ Agree to Help Luna",
-      next: "forest"
+      next: "fairyQuest"
     },
     {
       text: "🌒 Ask Luna About the Forest",
