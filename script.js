@@ -449,7 +449,7 @@ function updateCharacterImage() {
   character.style.display = "block";
 
   } else if (
-    currentRoom === "lunaClearing"
+    currentRoom === "lunaClearing" ||
     currentRoom === "fairyComplete"
   ) {
     character.src = "pictures/luna&moonbeam.png";
