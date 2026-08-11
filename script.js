@@ -427,7 +427,7 @@ const lunaRooms = [
 ];
 
 function updateCharacterImage() {
-  const character = document.getElementById("character");
+  const character = document.querySelector("game-content img");
   alert("Room: " + currentRoom + " | Character found: " + !!character);
 
   if (!character) return;
