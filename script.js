@@ -429,7 +429,6 @@ const lunaRooms = [
 
 function updateCharacterImage() {
   if (!character) return;
-}
 
 if (
   currentRoom === "moonbeam" ||
