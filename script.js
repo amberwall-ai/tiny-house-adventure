@@ -441,7 +441,8 @@ function updateCharacterImage() {
 
   } else if (
   currentRoom === "lunaIntroduction" ||
-  currentRoom === "lunaStory"
+  currentRoom === "lunaStory" ||
+  currentRoom === "fairyDust" 
   ) {
   character.src = "pictures/luna.png";
   character.alt = "Luna";
