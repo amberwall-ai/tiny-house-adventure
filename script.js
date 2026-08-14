@@ -314,8 +314,8 @@ river: {
     description: "A crystal-clear river flows gently. Fish swim beneath the surface.",
     options: [
         {
-            text: "Go Fishing",
-            next: "fish"
+            text: "🎣 Fish at the River",
+            next: "fishing"
         },
         {
             text: "Return to Forest",
@@ -324,17 +324,32 @@ river: {
     ]
 },
 
-fish: {
-    description: "You caught a fish! Dinner is saved.",
+fishing: {
+    description: "You sit beside the gently flowing river and cast your line into the glowing water.",
     options: [
        {
-        text: "🎏 Add Fish to Inventory",
+        text: "🎏 Cast the Line",
+        next: "caughtFish",
         action:() => {
-          addItem("🎏 Fish");
-        },
-        next: "river"
-       }
-    ]
+          inventory.push("Fish");
+          updateInventory();
+        }
+      }
+  ]
+},
+
+caughtFish: {
+  description: "You feel a tug on the line and pull a shimmering fish from the river!",
+  options: [
+    {
+      text: "🎣 Fish Again",
+      next: "fishing"
+    },
+    {
+      text: "Return to River",
+      next: "river"
+    }
+  ]
 },
 
 moonbeam: {
@@ -462,10 +477,32 @@ function updateCharacterImage() {
     character.src = "pictures/campfireCoffee.png";
     character.alt = "Someone enjoying a cup of coffee by the campfire";
     character.style.display = "block";
+  
+  } else if (
+    currentRoom === "river"
+  ) {
+    character.src = "pictures/river.png";
+    character.alt = "Moonlit River";
+    character.style.display = "block";
 
+  } else if (
+    currentRoom === "fishing"
+  ) {
+    character.src = "pictures/fishing.png";
+    character.alt = "Fishing at the River";
+    character.style.display = "block";
+
+  } else if (
+    currentRoom === "cuaghtFish"
+  ) {
+    character.src = "pictures/caughtfish.png";
+    character.alt = "A fish is caught at the river";
+    character.style.display = "block";
+  
   } else {
     character.style.display = "none";
   }
+
 }
 
 function showRoom() {
@@ -498,7 +535,7 @@ function showRoom() {
       };
 
     buttons.appendChild(button);
-  });
-}
+})
+};
 
 showRoom();
