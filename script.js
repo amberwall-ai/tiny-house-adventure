@@ -378,7 +378,7 @@ lunaIntroduction: {
   options: [
     {
       text: "✨ Agree to Help Luna",
-      next: "fairyQuest"
+      next: "mushroom"
     },
     {
       text: "🌒 Ask Luna About the Forest",
@@ -393,7 +393,7 @@ lunaStory: {
   options: [
     {
       text: "✨ Agree to Help",
-      next: "fairyQuest"
+      next: "mushroom"
     },
     {
       text: "🐇 Visit Moonbeam",
