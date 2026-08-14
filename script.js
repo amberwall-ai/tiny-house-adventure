@@ -193,7 +193,7 @@ fairyQuest:{
   description: "Luna the fairy looks worried. `My magic is weak! I need 3 sparkle drops from the forest to restore my fairy dust. Will you help me?`",
   options: [
      {
-      text: "Help Luna",
+      text: "Begin Luna's Quest",
       next: "collectSparkles"
      },
     {
