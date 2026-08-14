@@ -393,7 +393,7 @@ lunaStory: {
   options: [
     {
       text: "✨ Agree to Help",
-      next: "forest"
+      next: "fairyQuest"
     },
     {
       text: "🐇 Visit Moonbeam",
