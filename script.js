@@ -91,7 +91,7 @@ const rooms = {
     options: [
       {
       text: "Go to Living Room",
-      next: "livingRoom"
+      next: "livingroom"
       },
       {
       text: "Go to Kitchen",
@@ -523,13 +523,12 @@ function updateCharacterImage() {
     character.alt = "A cozy porch with a chair and table and a roof to enjoy a rainy day";
     character.style.display = "block";
 
-  { else if (
+   } else if (
     currentRoom === "livingroom"
   ) {
      character.src = "pictures/livingroom.png"
      character.alt = "AS cozy livingroom with a reading chair by the window awaits the adventurer. A small bookshelf is filled with books and a few family photos. A small couch sits in front of a small fireplace inviting to guests on cold nights."
      character.style.display = "block";
-  }
 
   } else {
     character.style.display = "none";
