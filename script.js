@@ -492,7 +492,7 @@ function updateCharacterImage() {
     character.style.display = "block";
 
   } else if (
-    currentRoom === "cuaghtFish"
+    currentRoom === "caughtFish"
   ) {
     character.src = "pictures/caughtfish.png";
     character.alt = "A fish is caught at the river";
