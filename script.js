@@ -141,7 +141,7 @@ const rooms = {
       next: "bedroom"
     },
     {text: "🪜 Go Downstairs",
-      next: "livingRoom"
+      next: "hall"
     },
   ]
 },
