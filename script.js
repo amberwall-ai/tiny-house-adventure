@@ -123,7 +123,7 @@ const rooms = {
       },
       {
         text: "Return to Living Room",
-        next: "livingRoom"
+        next: "livingroom"
       }
     ]
   },
@@ -529,6 +529,13 @@ function updateCharacterImage() {
      character.src = "pictures/livingroom.png"
      character.alt = "AS cozy livingroom with a reading chair by the window awaits the adventurer. A small bookshelf is filled with books and a few family photos. A small couch sits in front of a small fireplace inviting to guests on cold nights."
      character.style.display = "block";
+
+  } else if (
+    currentRoom === "kitchen"
+  ) {
+    character.src = "pictures/kitchen.png"
+    character.alt = "A cozy kitchen with a small table and chairs. A small kitchen island with a plate of cookies and steaming cup of coffee."
+    character.style.display = "block";
 
   } else {
     character.style.display = "none";
