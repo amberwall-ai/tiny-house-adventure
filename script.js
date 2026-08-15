@@ -332,7 +332,6 @@ fishing: {
         next: "caughtFish",
         action:() => {
           inventory.push("Fish");
-          updateInventory();
         }
       }
   ]
