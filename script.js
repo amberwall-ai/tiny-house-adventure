@@ -55,7 +55,7 @@ const rooms = {
     options: [
       {
         text: "Go Inside",
-        next: "livingRoom"
+        next: "hall"
       },
       {
         text: "Walk into the Forest",
@@ -68,7 +68,7 @@ const rooms = {
     ]
   },
 
-  livingRoom: {
+  livingroom: {
     description: "The living room is warm and cozy. With a comfy reading chair by the window with a blanket draped over the back. A small bookshelf is filled with books and a few family photos. A small couch sits in front of a small fireplace. A small coffee table sits in front of the couch with a cup left from the morning coffee. A soft rug is on the floor and a small side table with a lamp sits next to the couch.",
     options: [
       {
@@ -82,6 +82,24 @@ const rooms = {
       {
         text: "Go Outside",
         next: "hall"
+      }
+    ]
+  },
+
+  hall: {
+    description: "You step inside the door to a small hallway. The hallway has a small set of coat hooks and a small bench to sit on. A small rug is on the floor. The hallway leads to the living room, kitchen, and stairs to the bedroom.",
+    options: [
+      {
+      text: "Go to Living Room",
+      next: "livingRoom"
+      },
+      {
+      text: "Go to Kitchen",
+      next: "ktichen"
+      },
+      {
+        text: "Exit the House",
+        next: "porch"
       }
     ]
   },
@@ -504,6 +522,14 @@ function updateCharacterImage() {
     character.src = "pictures/porch.png";
     character.alt = "A cozy porch with a chair and table and a roof to enjoy a rainy day";
     character.style.display = "block";
+
+  { else if (
+    currentRoom === "livingroom"
+  ) {
+     character.src = "pictures/livingroom.png"
+     character.alt = "AS cozy livingroom with a reading chair by the window awaits the adventurer. A small bookshelf is filled with books and a few family photos. A small couch sits in front of a small fireplace inviting to guests on cold nights."
+     character.style.display = "block";
+  }
 
   } else {
     character.style.display = "none";
