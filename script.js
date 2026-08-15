@@ -95,7 +95,7 @@ const rooms = {
       },
       {
       text: "Go to Kitchen",
-      next: "ktichen"
+      next: "kitchen"
       },
       {
         text: "Exit the House",
