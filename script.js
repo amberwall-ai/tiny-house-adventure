@@ -1,4 +1,4 @@
-let currentRoom = "hall";
+let currentRoom = "porch";
 
 let inventory = [];
 const inventoryDisplay = document.getElementById("inventory");
@@ -50,8 +50,8 @@ function updateEnergyDisplay() {
 }
 
 const rooms = {
-  hall: {
-    description: "You are standing on the front porch of your tiny house.",
+  porch: {
+    description: "You are standing on the front porch of your tiny house.You are standing on the porch of your tiny house. It is small but has a small cozy chair and table in the corner to sit in the morning and drink coffee. The sun is beautiful in the mornings and peaceful. You can see the forest and occasional wildlife from the porch.",
     options: [
       {
         text: "Go Inside",
@@ -69,7 +69,7 @@ const rooms = {
   },
 
   livingRoom: {
-    description: "The living room is warm and cozy.",
+    description: "The living room is warm and cozy. With a comfy reading chair by the window with a blanket draped over the back. A small bookshelf is filled with books and a few family photos. A small couch sits in front of a small fireplace. A small coffee table sits in front of the couch with a cup left from the morning coffee. A soft rug is on the floor and a small side table with a lamp sits next to the couch.",
     options: [
       {
         text: "Go to Kitchen",
@@ -498,6 +498,13 @@ function updateCharacterImage() {
     character.alt = "A fish is caught at the river";
     character.style.display = "block";
   
+  } else if (
+    currentRoom === "porch"
+  ) {
+    character.src = "pictures/porch.png";
+    character.alt = "A cozy porch with a chair and table and a roof to enjoy a rainy day";
+    character.style.display = "block";
+
   } else {
     character.style.display = "none";
   }
