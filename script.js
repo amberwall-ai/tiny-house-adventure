@@ -552,6 +552,20 @@ function updateCharacterImage() {
     character.alt = "A cozy kitchen with a small table and chairs. A small kitchen island with a plate of cookies and steaming cup of coffee."
     character.style.display = "block";
 
+  } else if (
+    currentRoom === "hall"
+  ) {
+    character.src = "pictures/hall.png"
+    character.alt = "A cozy hallway with a small set of coat hooks and a small bench to sit on. A small rug is on the floor. The hallway leads to the living room, kitchen, and stairs to the bedroom."
+    character.style.display = "blo0ck";
+
+  } else if (
+    currentRoom === "coffee"
+  ) {
+    character.src = "pictures/makecoffee.png"
+    character.alt = "A cozy campfire with a pot of coffee percolating on the fire and the smell of robust coffee hits your nose."
+    character.style.display = "block";
+
   } else {
     character.style.display = "none";
   }
