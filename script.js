@@ -299,7 +299,7 @@ fairyComplete: {
 },
 
 campfire: {
-  description: "A warm campfire crackles under the moon. A pot of coffee starts percolating on the fire and the smell of robust coffee hits your nose.",
+  description: "A warm campfire crackles under the moon. A coffee pot rests nearby, waiting to be used.",
   options: [
     {
       text: "Make Coffee",
