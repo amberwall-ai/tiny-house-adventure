@@ -12,6 +12,8 @@ let quests = {
 let energy = 100
 const maxEnergy = 100;
 
+let coffeeMade = false;
+
 function addItem(item) {
      if (!inventory.includes(item)) {
         inventory.push(item);
@@ -299,32 +301,45 @@ fairyComplete: {
 campfire: {
   description: "A warm campfire crackles under the moon. A pot of coffee starts percolating on the fire and the smell of robust coffee hits your nose.",
   options: [
-      {
-        text: "Make Coffee",
-        next: "coffee"
+    {
+      text: "Make Coffee",
+      action: () => {
+        coffeeMade = true;
       },
-      {
-        text: "Return to Forest🌳",
-        next: "forest"
-      }
-   ]
+      next: "coffee"
+    },
+    {
+      text: "Drink Coffee ☕️",
+      action: () => {
+        changeEnergy(20);
+        coffeeMade = false;
+        alert("You drink the wonderfully warming coffee. +20 Energy!");
+      },
+      next: "campfire"
+    },
+    {
+      text: "Return to Forest🌳",
+      next: "forest"
+    }
+  ]
 },
-  
+
 coffee: {
   description: "The coffee smells enticing. You feel refreshed!",
   options: [
-      {
-        text: "Drink Coffee ☕️",
-        action: () => {
-          changeEnergy(20);
-          alert("You drink the wonderfully warming coffee. +20 Energy!");
-        },
-        next: "campfire"
+    {
+      text: "Drink Coffee ☕️",
+      action: () => {
+        changeEnergy(20);
+        coffeeMade = false;
+        alert("You drink the wonderfully warming coffee. +20 Energy!");
       },
-      {
-        text: "Sit by the Fire",
-        next: "campfire"
-      }
+      next: "campfire"
+    },
+    {
+      text: "Sit by the Fire 🔥",
+      next: "campfire"
+    }
   ]
 },
 
@@ -552,7 +567,13 @@ function showRoom() {
   buttons.innerHTML = "";
 
   rooms[currentRoom].options.forEach(option => {
-    const button = document.createElement("button");
+
+  if (currentRoom === "campfire") {
+    if (option.text === "Make Coffee" && coffeeMade) return;
+    if (option.text === "Drink Coffee ☕️" && !coffeeMade) return;
+  }
+
+  const button = document.createElement("button");
 
     button.textContent = option.text;
 
