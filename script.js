@@ -51,7 +51,7 @@ function updateEnergyDisplay() {
 
 const rooms = {
   porch: {
-    description: "You are standing on the front porch of your tiny house.You are standing on the porch of your tiny house. It is small but has a small cozy chair and table in the corner to sit in the morning and drink coffee. The sun is beautiful in the mornings and peaceful. You can see the forest and occasional wildlife from the porch.",
+    description: "You are standing on the porch of your tiny house. It is small but has a small cozy chair and table in the corner to sit in the morning and drink coffee. The sun is beautiful in the mornings and peaceful. You can see the forest and occasional wildlife from the porch.",
     options: [
       {
         text: "Go Inside",
@@ -304,14 +304,6 @@ campfire: {
         next: "coffee"
       },
       {
-        text: "☕️ Drink Coffee",
-        action: () => {
-          changeEnergy(20);
-          alert("You drink a wonderfully, warming coffee. +20 Energy!");
-        },
-        next: "campfire"
-      },
-      {
         text: "Return to Forest🌳",
         next: "forest"
       }
@@ -321,6 +313,14 @@ campfire: {
 coffee: {
   description: "The coffee smells enticing. You feel refreshed!",
   options: [
+      {
+        text: "Drink Coffee ☕️",
+        action: () => {
+          changeEnergy(20);
+          alert("You drink the wonderfully warming coffee. +20 Energy!");
+        },
+        next: "campfire"
+      },
       {
         text: "Sit by the Fire",
         next: "campfire"
