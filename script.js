@@ -557,7 +557,7 @@ function updateCharacterImage() {
   ) {
     character.src = "pictures/hall.png"
     character.alt = "A cozy hallway with a small set of coat hooks and a small bench to sit on. A small rug is on the floor. The hallway leads to the living room, kitchen, and stairs to the bedroom."
-    character.style.display = "blo0ck";
+    character.style.display = "block";
 
   } else if (
     currentRoom === "coffee"
