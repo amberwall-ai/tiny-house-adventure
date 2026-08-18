@@ -147,19 +147,33 @@ const rooms = {
       next: "hall"
       },
       {
-       text: "Pet the Cat 🐈",
-       action: () => {
-         alert("The cat curls around your hand and starts purring.");
+      text: "Pet Etta 🐕",
+      action: () => {
+        alert("Etta wags her tail and leans against you.");
      },
-       next: "bedroom"
-   },
-{
-  text: "Pet the Dog 🐕",
-  action: () => {
-    alert("The dog wags its tail and leans against you.");
-  },
-  next: "bedroom"
-}
+      next: "bedroom"
+     },
+     {
+     text: "Play with Etta 🐕",
+     action: () => {
+       alert("Etta grabs her favorite toy and bounces around happily.");
+     },
+      next: "bedroom"
+     },
+     {
+     text: "Pet Purrcilla 🐈",
+     action: () => {
+       alert("Purrcilla curls around your hand and starts purring.");
+     },
+     next: "bedroom"
+    },
+    {
+    text: "Talk to Purrcilla 🐈",
+    action: () => {
+      alert("Purrcilla gives you a slow blink, then turns away like the conversation is over.");
+    },
+    next: "bedroom"
+    }
   ]
 },
   
