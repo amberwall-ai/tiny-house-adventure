@@ -581,6 +581,12 @@ function updateCharacterImage() {
     character.alt = "A cozy campfire with a pot of coffee percolating on the fire and the smell of robust coffee hits your nose."
     character.style.display = "block";
 
+  } else if (
+    currentRoom === "bedroom"
+  ) {
+    character.src = "pictures/bedroom.png"
+    character.alt = "A cozy bedroom with a reading nook and a bed with fluffy pillows and a blanket draper over the back. A small side table with a lamp sits next to the bed."
+    character.style.display = "block";
   } else {
     character.style.display = "none";
   }
