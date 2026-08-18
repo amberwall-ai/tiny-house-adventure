@@ -141,10 +141,25 @@ const rooms = {
         alert("You wake up refreshed and ready for another adventure!");
        },
       next: "bedroom"
-    },
-    {text: "🪜 Go Downstairs",
+      },
+      {
+      text: "🪜 Go Downstairs",
       next: "hall"
-    },
+      },
+      {
+       text: "Pet the Cat 🐈",
+       action: () => {
+         alert("The cat curls around your hand and starts purring.");
+     },
+       next: "bedroom"
+   },
+{
+  text: "Pet the Dog 🐕",
+  action: () => {
+    alert("The dog wags its tail and leans against you.");
+  },
+  next: "bedroom"
+}
   ]
 },
   
