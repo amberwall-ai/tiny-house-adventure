@@ -642,7 +642,7 @@ function showRoom() {
         }
 
         if (option.next) {
-          currentRoom = option.nect;
+          currentRoom = option.next;
           showRoom();
         }
       };
