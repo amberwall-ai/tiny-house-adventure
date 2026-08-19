@@ -150,6 +150,7 @@ const rooms = {
       text: "Pet Etta 🐕",
         action: () => {
           alert("PET ACTION");
+          alert(character);
         character.src = "pictures/petEtta.png";
         alert(character.src);
         character.alt = "Etta being petted in the cozy bedroom";
