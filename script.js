@@ -589,24 +589,24 @@ function updateCharacterImage() {
     character.src = "pictures/bedroom.png"
     character.alt = "A cozy bedroom with a reading nook and a bed with fluffy pillows and a blanket draper over the back. A small side table with a lamp sits next to the bed."
     character.style.display = "block";
-    
+
   } else if (currentRoom === "petEtta") {
-    character.src = "pictures/petetta.png";
+    character.src = "pictures/petEtta.png";
     character.alt = "Etta being petted in the cozy bedroom";
     character.style.display = "block";
   }
   else if (currentRoom === "playEtta") {
-    character.src = "pictures/playetta.png";
+    character.src = "pictures/playEtta.png";
     character.alt = "Etta playing in the cozy bedroom";
     character.style.display = "block";
   }
   else if (currentRoom === "petPurrcilla") {
-    character.src = "pictures/petpurrcilla.png";
+    character.src = "pictures/petPurrcilla.png";
     character.alt = "Purrcilla being petted on the bed";
     character.style.display = "block";
   }
   else if (currentRoom === "talkPurrcilla") {
-    character.src = "pictures/talkpurrcilla.png";
+    character.src = "pictures/talkPurrcilla.png";
     character.alt = "Purrcilla sitting proudly in the bedroom";
     character.style.display = "block";
   } else {
