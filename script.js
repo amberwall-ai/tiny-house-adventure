@@ -151,6 +151,7 @@ const rooms = {
         action: () => {
           alert("PET ACTION");
         character.src = "pictures/petEtta.png";
+        alert(character.src);
         character.alt = "Etta being petted in the cozy bedroom";
         character.style.display = "block";
       },
@@ -631,7 +632,6 @@ function showRoom() {
     button.textContent = option.text;
 
     button.onclick = () => {
-        alert(option.next);
         console.log(option);
         
         if (option.action){
