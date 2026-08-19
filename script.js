@@ -589,6 +589,7 @@ function updateCharacterImage() {
     character.src = "pictures/bedroom.png"
     character.alt = "A cozy bedroom with a reading nook and a bed with fluffy pillows and a blanket draper over the back. A small side table with a lamp sits next to the bed."
     character.style.display = "block";
+    
   } else if (currentRoom === "petEtta") {
     character.src = "pictures/petetta.png";
     character.alt = "Etta being petted in the cozy bedroom";
