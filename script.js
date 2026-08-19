@@ -630,7 +630,7 @@ function showRoom() {
     button.textContent = option.text;
 
     button.onclick = () => {
-        alert("BUTTON CLICKED");
+        alert(option.next);
         console.log(option);
         
         if (option.action){
