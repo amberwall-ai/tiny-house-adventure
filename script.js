@@ -608,6 +608,7 @@ function updateCharacterImage() {
 } else {
   character.style.display = "none";
 }
+}
 
 function showRoom() {
   console.log("Current Room:", currentRoom);
@@ -646,8 +647,7 @@ function showRoom() {
       };
 
     buttons.appendChild(button);
-})
-}
+});
 };
 
-showRoom();
+showRoom()
