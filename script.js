@@ -606,7 +606,7 @@ function updateCharacterImage() {
     character.alt = "A cozy bedroom with a reading nook and a bed with fluffy pillows and a blanket draper over the back. A small side table with a lamp sits next to the bed."
     character.style.display = "block";
 } else {
-  character.style.disply = "none";
+  character.style.display = "none";
 }
 
 function showRoom() {
@@ -639,9 +639,10 @@ function showRoom() {
           changeEnergy(option.energyCost);
         }
 
-        currentRoom = option.next;
-
-        showRoom();
+        if (option.next) {
+          currentRoom = option.nect;
+          showRoom();
+        }
       };
 
     buttons.appendChild(button);
