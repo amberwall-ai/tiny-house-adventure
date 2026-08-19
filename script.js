@@ -148,31 +148,19 @@ const rooms = {
       },
       {
       text: "Pet Etta 🐕",
-      action: () => {
-        alert("Etta wags her tail and leans against you.");
-     },
-      next: "bedroom"
+      next: "petEtta",
      },
      {
      text: "Play with Etta 🐕",
-     action: () => {
-       alert("Etta grabs her favorite toy and bounces around happily.");
-     },
-      next: "bedroom"
+     next: "playEtta",
      },
      {
      text: "Pet Purrcilla 🐈",
-     action: () => {
-       alert("Purrcilla curls around your hand and starts purring.");
+     next: "petPurrcilla",
      },
-     next: "bedroom"
-    },
     {
     text: "Talk to Purrcilla 🐈",
-    action: () => {
-      alert("Purrcilla gives you a slow blink, then turns away like the conversation is over.");
-    },
-    next: "bedroom"
+    next: "talkPurrcilla",
     }
   ]
 },
@@ -600,6 +588,25 @@ function updateCharacterImage() {
   ) {
     character.src = "pictures/bedroom.png"
     character.alt = "A cozy bedroom with a reading nook and a bed with fluffy pillows and a blanket draper over the back. A small side table with a lamp sits next to the bed."
+    character.style.display = "block";
+  } else if (currentRoom === "petEtta") {
+    character.src = "pictures/petetta.png";
+    character.alt = "Etta being petted in the cozy bedroom";
+    character.style.display = "block";
+  }
+  else if (currentRoom === "playEtta") {
+    character.src = "pictures/playetta.png";
+    character.alt = "Etta playing in the cozy bedroom";
+    character.style.display = "block";
+  }
+  else if (currentRoom === "petPurrcilla") {
+    character.src = "pictures/petpurrcilla.png";
+    character.alt = "Purrcilla being petted on the bed";
+    character.style.display = "block";
+  }
+  else if (currentRoom === "talkPurrcilla") {
+    character.src = "pictures/talkpurrcilla.png";
+    character.alt = "Purrcilla sitting proudly in the bedroom";
     character.style.display = "block";
   } else {
     character.style.display = "none";
