@@ -149,14 +149,13 @@ const rooms = {
       {
       text: "Pet Etta 🐕",
         action: () => {
-          alert("PET ACTION");
-          alert(character);
-        character.src = "pictures/petEtta.png";
-        alert(character.src);
-        character.alt = "Etta being petted in the cozy bedroom";
-        character.style.display = "block";
+           const character = document.querySelector("#game-content img");
+
+      character.src = "pictures/petEtta.png";
+      character.alt = "Etta being petted in the cozy bedroom";
+      character.style.display = "block";
+      }
       },
-     },
      {
      text: "Play Etta 🐕",
       action: () => {
