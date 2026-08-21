@@ -145,7 +145,7 @@ h2 {
 .room-image {
   width: 100%;
   max-width: 850px;
-  max-height: 500px;
+  max-height: 420px;
   object-fit: cover;
   border-radius: 20px;
   display: block;
