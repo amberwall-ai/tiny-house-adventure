@@ -153,8 +153,10 @@ h2 {
 }
 
 .game-subtitle {
-  font-size: 1.4rem;
-  margin-top: 5px;
+  font-size: 1.2rem;
+  margin-top: 0;
   margin-bottom: 25px;
   font-style: italic;
+  opacity: 0.8;
+  letter-spacing: 1px;
 }
