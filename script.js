@@ -156,16 +156,20 @@ const rooms = {
       character.style.display = "block";
       }
       },
-     {
-     text: "Play Etta 🐕",
-      action: () => {
-        const character = document.querySelector("#game-content img");
+      {
+      text: "Play Etta 🐕",
+       action: () => {
+          const character = document.querySelector("#game-content img");
+          const animalDialogue = document.querySelector("#animal-dialogue");
 
-        character.src = "pictures/playEtta.png";
-        character.alt = "Etta playing in the cozy bedroom";
-        character.style.display = "block";
-      }
-     },
+          character.src = "pictures/playEtta.png";
+          character.alt = "Etta playing happily";
+          character.style.display = "block";
+
+          animalDialogue.textContent =
+              "Do you wanna play? I already decided yes!";
+        }
+      },
      {
      text: "Pet Purrcilla 🐈",
       action: () => {
