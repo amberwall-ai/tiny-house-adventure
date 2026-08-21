@@ -151,3 +151,10 @@ h2 {
   display: block;
   margin: 0 auto 20px;
 }
+
+.game-subtitle {
+  font-size: 1.4rem;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-style: italic;
+}
