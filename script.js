@@ -181,7 +181,7 @@ const rooms = {
      acrion: () => {
       const character = document.querySelector("#game-content img");
 
-      character.src = "pictures/talkPurcilla.png";
+      character.src = "pictures/talkPurrcilla.png";
       character.alt = "Purrcilla sitting proudly in the bedroom";
       character.style.display = "block";
      }
