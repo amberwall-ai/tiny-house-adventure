@@ -663,4 +663,17 @@ function showRoom() {
 });
 };
 
-showRoom()
+showRoom();
+
+const backgroundMusic = document.querySelector("#background-music");
+const musicButton = document.querySelector("#music-button");
+
+musicButton.addEventListener("click", () => {
+    if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        musicButton.textContent = "🔇 Pause Music";
+    } else {
+        backgroundMusic.pause();
+        musicButton.textContent = "🎵 Play Music";
+    }
+});
