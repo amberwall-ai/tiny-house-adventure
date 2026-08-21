@@ -159,6 +159,8 @@ const rooms = {
      {
      text: "Play Etta 🐕",
       action: () => {
+        const character = document.querySelector("#game-content img");
+
         character.src = "pictures/playEtta.png";
         character.alt = "Etta playing in the cozy bedroom";
         character.style.display = "block";
@@ -167,6 +169,8 @@ const rooms = {
      {
      text: "Pet Purrcilla 🐈",
       action: () => {
+        const character = document.querySelector("#game-content img");
+
         character.src = "pictures/petPurrcilla.png";
         character.alt = "Purrcilla being petted on the bed";
         character.style.display = "block";
@@ -175,6 +179,8 @@ const rooms = {
     {
     text: "Talk to Purrcilla 🐈",
      acrion: () => {
+      const character = document.querySelector("#game-content img");
+
       character.src = "pictures/talkPurcilla.png";
       character.alt = "Purrcilla sitting proudly in the bedroom";
       character.style.display = "block";
