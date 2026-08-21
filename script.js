@@ -178,7 +178,7 @@ const rooms = {
      },
     {
     text: "Talk to Purrcilla 🐈",
-     acrion: () => {
+     action: () => {
       const character = document.querySelector("#game-content img");
 
       character.src = "pictures/talkPurrcilla.png";
