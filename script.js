@@ -179,8 +179,8 @@ const rooms = {
     {
     text: "Talk to Purrcilla 🐈",
      action: () => {
+        alert("SASS IS FIRING");
       const character = document.querySelector("#game-content img");
-
       character.src = "pictures/talkPurrcilla.png";
       character.alt = "Purrcilla sitting proudly in the bedroom";
       character.style.display = "block";
