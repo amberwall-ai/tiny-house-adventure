@@ -141,3 +141,13 @@ h2 {
     max-width: 95%;
   }
 }
+
+.room-image {
+  width: 100%;
+  max-width: 850px;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto 20px;
+}

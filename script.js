@@ -180,7 +180,7 @@ const rooms = {
     text: "Talk to Purrcilla 🐈",
      action: () => {
       const character = document.querySelector("#game-content img");
-      
+
       character.src = "pictures/talkPurrcilla.png";
       character.alt = "Purrcilla sitting proudly in the bedroom";
       character.style.display = "block";
@@ -599,6 +599,7 @@ function updateCharacterImage() {
     character.src = "pictures/hall.png"
     character.alt = "A cozy hallway with a small set of coat hooks and a small bench to sit on. A small rug is on the floor. The hallway leads to the living room, kitchen, and stairs to the bedroom."
     character.style.display = "block";
+    character.classList.add("room-image");
 
   } else if (
     currentRoom === "coffee"
