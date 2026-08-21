@@ -180,10 +180,14 @@ const rooms = {
     text: "Talk to Purrcilla 🐈",
      action: () => {
       const character = document.querySelector("#game-content img");
+      const animalDialogue = document.querySelector("#animal-dialogue");
 
       character.src = "pictures/talkPurrcilla.png";
       character.alt = "Purrcilla sitting proudly in the bedroom";
       character.style.display = "block";
+
+      animalDialogue.textContent =
+    "Oh, hello. You're here to admire my impeccable taste, I presume? Make yourself useful.";
      }
     }
   ]
