@@ -148,12 +148,16 @@ const rooms = {
       },
       {
       text: "Pet Etta 🐕",
-        action: () => {
-           const character = document.querySelector("#game-content img");
+       action: () => {
+        const character = document.querySelector("#game-content img");
+        const animalDialogue = document.querySelector("#animal-dialogue");
 
-      character.src = "pictures/petEtta.png";
-      character.alt = "Etta being petted in the cozy bedroom";
-      character.style.display = "block";
+        character.src = "pictures/petEtta.png";
+        character.alt = "Etta being petted in the cozy bedroom";
+        character.style.display = "block";
+
+        animalDialogue.textContent =
+            "YES. THIS IS THE CORRECT SPOT. DO NOT STOP.";
       }
       },
       {
