@@ -6,7 +6,7 @@ const inventoryDisplay = document.getElementById("inventory");
 let quests = {
   helpLuna: false,
   findFairyDust: false,
-  collectSparkles: 0
+  collectSparkles: Number(sessionStorage.getItem("sparkles")) || 0
 };
 
 let energy = 100
@@ -265,18 +265,33 @@ fairy: {
  ]
 },
 
-fairyQuest:{
+fairyQuest: {
   description: "Luna the fairy looks worried. `My magic is weak! I need 3 sparkle drops from the forest to restore my fairy dust. Will you help me?`",
   options: [
-     {
-      text: "Begin Luna's Quest",
-      next: "collectSparkles"
-     },
     {
-     text: "Maybe Later",
-     next: "forest"
-   }
- ]
+      text: "Begin Luna's Quest",
+      action: () => {
+        quests.helpLuna = true;
+        alert(`Sparkles collected: ${quests.collectSparkles}`);
+
+        if (quests.collectSparkles === 0) {
+          currentRoom = "collectSparkles";
+        } else if (quests.collectSparkles === 1) {
+          currentRoom = "sparkleTwo";
+        } else if (quests.collectSparkles === 2) {
+          currentRoom = "sparkleThree";
+        } else {
+          currentRoom = "fairyComplete";
+        }
+
+        showRoom();
+      }
+    },
+    {
+      text: "Maybe Later",
+      next: "forest"
+    }
+  ]
 },
 
 fairyDust: {
@@ -296,7 +311,10 @@ collectSparkles: {
       text: "Collect Sparkle One",
       next: "sparkleTwo",
       action: () => {
+        quests.collectSparkles++;
+        sessionStorage.setItem("sparkles", quests.collectSparkles);
         addItem("✨ Sparkle One");
+
       }
     },
     {
@@ -313,6 +331,8 @@ sparkleTwo: {
       text: "Collect Sparkle Two",
       next: "sparkleThree",
       action: () => {
+        quests.collectSparkles++;
+        sessionStorage.setItem("sparkles", quests.collectSparkles);
         addItem("✨ Sparkle Two");
       }
     },
@@ -330,6 +350,8 @@ sparkleThree: {
       text: "Collect Sparkle Three",
       next: "fairyComplete",
       action: () => {
+        quests.collectSparkles++;
+        sessionStorage.setItem("sparkles", quests.collectSparkles);
         addItem("✨ Sparkle Three");
       }
     },
