@@ -635,6 +635,8 @@ function updateCharacterImage() {
 }
 
 function showRoom() {
+  const animalDialogue = document.querySelector("#animal-dialogue");
+  animalDialogue.textContent = "";
   console.log("Current Room:", currentRoom);
   description.textContent = rooms[currentRoom].description;
 
