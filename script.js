@@ -217,11 +217,6 @@ const rooms = {
         next: "moonbeam"
       },
       {
-        text: "Pick a Mushroom",
-        energyCost: -5,
-        next: "mushroom"
-      },
-      {
         text: "Walk to River",
         energyCost: -10,
         next: "river"
