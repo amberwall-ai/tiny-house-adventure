@@ -178,10 +178,13 @@ const rooms = {
      text: "Pet Purrcilla 🐈",
       action: () => {
         const character = document.querySelector("#game-content img");
+        const animalDialogue = document.querySelector("#animal-dialogue");
 
         character.src = "pictures/petPurrcilla.png";
         character.alt = "Purrcilla being petted on the bed";
         character.style.display = "block";
+
+        animalDialogue.textContent = "Petting me is a privalge. You may consider yourself fortunate.";
       }
      },
     {
