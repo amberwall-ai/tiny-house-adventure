@@ -6,7 +6,7 @@ const inventoryDisplay = document.getElementById("inventory");
 let quests = {
   helpLuna: false,
   findFairyDust: false,
-  collectSparkles: false
+  collectSparkles: 0
 };
 
 let energy = 100
@@ -37,17 +37,22 @@ function changeEnergy(amount) {
     alert("💤 You ran out of energy and woke up safely at home in the loft room!");
     energy = maxEnergy;
     updateEnergyDisplay();
-    showRoom("livingRoom");
+    currentRoom = "bedroom";
+    showRoom(); 
+    return true;
    } else if (energy <= 20) {
     alert("⚠️ Your energy is running low. You should return home and rest.");
    }
+
+
+    return false;
 }
 
 function updateEnergyDisplay() {
   const energyDisplay = document.getElementById("energy-display");
 
   if (energyDisplay) {
-    energyDisplay.textContent =`⚡️ Energy: ${energy}/{${maxEnergy}`;
+    energyDisplay.textContent = `⚡️ Energy: ${energy}/${maxEnergy}`;
   }
 }
 
@@ -184,7 +189,7 @@ const rooms = {
         character.alt = "Purrcilla being petted on the bed";
         character.style.display = "block";
 
-        animalDialogue.textContent = "Petting me is a privalge. You may consider yourself fortunate.";
+        animalDialogue.textContent = "Petting me is a privelge. You may consider yourself fortunate.";
       }
      },
     {
@@ -252,7 +257,7 @@ fairy: {
   options: [
     {
      text: "Take Fairy Dust",
-     next: "fairyQuest",
+     next: "fairyDust",
      action: () => {
         addItem("✨ Fairy Dust ✨");
         quests.findFairyDust = true;
@@ -284,13 +289,13 @@ fairyDust: {
   options: [
     {
       text: "Continue Exploring",
-      next: "forest"
+      next: "fairyQuest"
     }
   ]
 },
 
 collectSparkles: {
-  description: "You venture deeper into the glowing forest and find a tiny sparkle floatin near a flower. You collect it! ✨",
+  description: "You venture deeper into the glowing forest and find a tiny sparkle floating near a flower. You collect it! ✨",
   options: [
     {
       text: "Collect Sparkle One",
@@ -330,12 +335,12 @@ sparkleThree: {
       text: "Collect Sparkle Three",
       next: "fairyComplete",
       action: () => {
-        addItem("✨ Sparkle THree");
+        addItem("✨ Sparkle Three");
       }
     },
     {
       text: "Return to Luna",
-      next: "fairyComplete"
+      next: "fairy"
     }
   ]
 },
@@ -344,7 +349,7 @@ fairyComplete: {
   description: "Luna smiles as the sparkles surround her. Her wings glow brighter than ever! 'You saved the forest!' she says. 'Please accept this Fairy Cryatal as a token of my gratitude!' 💖🧚🏼‍♀️. It will light your path for adventures to come. Also, it shows magical creatures 🧌 that will help you on future quests!!'",
   options: [
     {
-      text: "Recieve Fairy Crystal",
+      text: "Receive Fairy Crystal",
       next: "forest",
       action: () => {
         addItem("💎 Fairy Crystal");
@@ -420,7 +425,7 @@ fishing: {
         text: "🎏 Cast the Line",
         next: "caughtFish",
         action:() => {
-          inventory.push("Fish");
+          addItem("Fish");
         }
       }
   ]
@@ -442,7 +447,7 @@ caughtFish: {
 
 moonbeam: {
   description:
-  "A tiny silver rabbit with blue-tipped ears hops into the path glowing in the moonlight. Blue sparkles appear beneath her paws. He pauses, looks back at you, as if to say 'Come, follow me.'",
+  "A tiny silver rabbit with blue-tipped ears hops into the path glowing in the moonlight. Blue sparkles appear beneath her paws. She pauses, looks back at you, as if to say 'Come, follow me.'",
   options: [
     {
       text: "🐇 Follow Moonbeam Deeper into the Forest",
@@ -458,7 +463,7 @@ moonbeam: {
 
 lunaClearing: {
   description:
-  "Moonbeam leads you into a hidden clearing filled with glowwing, magical mushroooms. Beneath an ancient weeping willow stands Luna, a fairy with shimmering blue-black hair and crystal-blue wings.",
+  "Moonbeam leads you into a hidden clearing filled with glowing, magical mushrooms. Beneath an ancient weeping willow stands Luna, a fairy with shimmering blue-black hair and crystal-blue wings.",
   options: [
     {
       text: "🧚🏼‍♀️ Talk to Luna",
@@ -522,12 +527,6 @@ moonbeamHappy: {
 
 const description = document.getElementById("description");
 const buttons = document.getElementById("buttons");
-
-const lunaRooms = [
-  "moonbeam",
-  "lunaClearing",
-  "moonbeamHappy"
-];
 
 function updateCharacterImage() {
   const character = document.querySelector("#game-content img");
@@ -598,7 +597,7 @@ function updateCharacterImage() {
     currentRoom === "livingroom"
   ) {
      character.src = "pictures/livingroom.png"
-     character.alt = "AS cozy livingroom with a reading chair by the window awaits the adventurer. A small bookshelf is filled with books and a few family photos. A small couch sits in front of a small fireplace inviting to guests on cold nights."
+     character.alt = "A cozy livingroom with a reading chair by the window awaits the adventurer. A small bookshelf is filled with books and a few family photos. A small couch sits in front of a small fireplace inviting to guests on cold nights."
      character.style.display = "block";
 
   } else if (
@@ -627,7 +626,7 @@ function updateCharacterImage() {
     currentRoom === "bedroom"
   ) {
     character.src = "pictures/bedroom.png"
-    character.alt = "A cozy bedroom with a reading nook and a bed with fluffy pillows and a blanket draper over the back. A small side table with a lamp sits next to the bed."
+    character.alt = "A cozy bedroom with a reading nook and a bed with fluffy pillows and a blanket draped over the back. A small side table with a lamp sits next to the bed."
     character.style.display = "block";
 } else {
   character.style.display = "none";
@@ -663,8 +662,12 @@ function showRoom() {
           option.action();
         }
         if (option.energyCost) {
-          changeEnergy(option.energyCost);
-        }
+        const ranOutOfEnergy = changeEnergy(option.energyCost);
+
+         if (ranOutOfEnergy) {
+          return;
+  }
+}
 
         if (option.next) {
           currentRoom = option.next;
