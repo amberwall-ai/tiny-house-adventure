@@ -268,6 +268,13 @@ fairy: {
 fairyQuest: {
   description: "Luna the fairy looks worried. `My magic is weak! I need 3 sparkle drops from the forest to restore my fairy dust. Will you help me?`",
   options: [
+     {
+     text: "Begin Luna's Quest",
+     next: "collectSparkles",
+     action: () => {
+       quests.helpLuna = true;
+    }
+  },
     {
       text: "Begin Luna's Quest",
       action: () => {
@@ -314,7 +321,11 @@ collectSparkles: {
         quests.collectSparkles++;
         sessionStorage.setItem("sparkles", quests.collectSparkles);
         addItem("✨ Sparkle One");
+<<<<<<< HEAD
+        quests.collectSparkles++;
+=======
 
+>>>>>>> dcc3ca58300558558ea0850f019029038d634b49
       }
     },
     {
@@ -334,6 +345,7 @@ sparkleTwo: {
         quests.collectSparkles++;
         sessionStorage.setItem("sparkles", quests.collectSparkles);
         addItem("✨ Sparkle Two");
+        quests.collectSparkles++;
       }
     },
     {
@@ -353,6 +365,7 @@ sparkleThree: {
         quests.collectSparkles++;
         sessionStorage.setItem("sparkles", quests.collectSparkles);
         addItem("✨ Sparkle Three");
+        quests.collectSparkles++;
       }
     },
     {
@@ -368,12 +381,16 @@ fairyComplete: {
     {
       text: "Receive Fairy Crystal",
       next: "forest",
-      action: () => {
-        addItem("💎 Fairy Crystal");
-        alert("🏆 Quest Complete! You have restored Luna's magic!!");
-      }
-    }
-  ]
+     action: () => {
+       if (quests.collectSparkles === 3) {
+       addItem("💎 Fairy Crystal");
+         alert("🏆 Quest Complete! You have restored Luna's magic!!");
+   } else {
+        alert("Luna still needs all 3 sparkles before her magic can be restored.");
+   }
+  }
+ }
+]
 },
 
 campfire: {
