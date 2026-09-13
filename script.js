@@ -270,16 +270,9 @@ fairyQuest: {
   options: [
      {
      text: "Begin Luna's Quest",
-     next: "collectSparkles",
      action: () => {
        quests.helpLuna = true;
-    }
-  },
-    {
-      text: "Begin Luna's Quest",
-      action: () => {
-        quests.helpLuna = true;
-        alert(`Sparkles collected: ${quests.collectSparkles}`);
+       alert(`Sparkles collected: ${queasts.collectSparkles}`);
 
         if (quests.collectSparkles === 0) {
           currentRoom = "collectSparkles";
