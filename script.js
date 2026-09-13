@@ -320,14 +320,10 @@ collectSparkles: {
       action: () => {
         quests.collectSparkles++;
         sessionStorage.setItem("sparkles", quests.collectSparkles);
-        addItem("✨ Sparkle One");
-<<<<<<< HEAD
-        quests.collectSparkles++;
-=======
-
->>>>>>> dcc3ca58300558558ea0850f019029038d634b49
+        addItem("✨ Sparkle One")
       }
     },
+
     {
       text: "Return to Luna",
       next: "fairy"
